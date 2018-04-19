@@ -1,0 +1,134 @@
+public class testClass extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        testClass r0;
+
+        r0 := @this: testClass;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void test2(int)
+    {
+        testClass r0;
+        int i0;
+        testClass$myclass r1, $r2;
+        java.lang.Integer $r3, $r4, r5, r6;
+
+        r0 := @this: testClass;
+
+        i0 := @parameter0: int;
+
+        $r2 = new testClass$myclass;
+
+        specialinvoke $r2.<testClass$myclass: void <init>(testClass,testClass$1)>(r0, null);
+
+        r1 = $r2;
+
+        $r3 = new java.lang.Integer;
+
+        specialinvoke $r3.<java.lang.Integer: void <init>(int)>(10);
+
+        r1.<testClass$myclass: java.lang.Integer f> = $r3;
+
+        if i0 <= 0 goto label1;
+
+        r5 = r1.<testClass$myclass: java.lang.Integer f>;
+
+        goto label2;
+
+     label1:
+        $r4 = new java.lang.Integer;
+
+        specialinvoke $r4.<java.lang.Integer: void <init>(int)>(20);
+
+        r1.<testClass$myclass: java.lang.Integer f> = $r4;
+
+        r6 = r1.<testClass$myclass: java.lang.Integer f>;
+
+     label2:
+        return;
+    }
+
+    public int test3(int, int)
+    {
+        testClass r0;
+        int $i0, i1, i2, i3, i4, i5, i6, i4_1, i4_2;
+
+        r0 := @this: testClass;
+
+        i1 := @parameter0: int;
+
+        i2 := @parameter1: int;
+
+        $i0 = i1 % 10;
+
+        if $i0 != 0 goto label1;
+
+        i3 = i1 * 3;
+
+        i4 = 50;
+
+(0)     goto label2;
+
+     label1:
+        i5 = i2 + i1;
+
+(1)     i4_1 = i2 + 1;
+
+     label2:
+        i4_2 = Phi(i4 #0, i4_1 #1);
+
+        i6 = i4_2 + 23;
+
+        return i6;
+    }
+
+    public int test2(int, int)
+    {
+        testClass r0;
+        int $i0, i1, i2, i1_1, i2_1, i1_2, i2_2, i1_3, i2_3;
+
+        r0 := @this: testClass;
+
+        i1 := @parameter0: int;
+
+(0)     i2 := @parameter1: int;
+
+     label1:
+        i1_1 = Phi(i1 #0, i1_2 #1, i1_1 #2, i1_3 #3);
+
+        i2_1 = Phi(i2 #0, i2_1 #1, i2_2 #2, i2_3 #3);
+
+        if i1_1 <= i2_1 goto label4;
+
+        if i1_1 <= -100 goto label3;
+
+        if i1_1 <= 0 goto label2;
+
+        i1_2 = i2_1;
+
+(1)     goto label1;
+
+     label2:
+        i2_2 = 100;
+
+(2)     goto label1;
+
+     label3:
+        i1_3 = 5;
+
+        i2_3 = 6;
+
+(3)     goto label1;
+
+     label4:
+        $i0 = i1_1 + i2_1;
+
+        return $i0;
+    }
+}

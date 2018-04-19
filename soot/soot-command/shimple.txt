@@ -1,0 +1,1 @@
+java -cp ./sootclasses-trunk.jar;./sootclasses-trunk-jar-with-dependencies.jar;. soot.Main -cp .;./rt.jar -f shimple testClass
