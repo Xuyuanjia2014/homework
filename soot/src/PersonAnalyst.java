@@ -1,7 +1,9 @@
 import soot.*;
+import soot.baf.BafBody;
 import soot.jimple.JimpleBody;
 import soot.options.Options;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -19,6 +21,8 @@ public class PersonAnalyst {
         finalString.append("Person's methods:\n");
         for(SootMethod temp : sc.getMethods()){
             StringBuffer sb = new StringBuffer("");
+            JimpleBody jBody = new JimpleBody(temp);
+            System.out.println(jBody.toString());
             for(Type type: temp.getParameterTypes()){
                 if(sb.toString().contains(",")){
                     sb.append(","+type.toQuotedString());
@@ -26,8 +30,8 @@ public class PersonAnalyst {
                 else {
                     sb.append(type.toQuotedString());
                 }
-
             }
+
             finalString.append(temp.getReturnType()+" "+temp.getName()+"("+sb.toString()+")\n");
         }
         finalString.append("Person's fields:\n");
