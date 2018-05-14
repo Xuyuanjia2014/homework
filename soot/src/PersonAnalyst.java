@@ -2,6 +2,7 @@ import soot.*;
 import soot.baf.BafBody;
 import soot.jimple.JimpleBody;
 import soot.options.Options;
+import soot.toolkits.graph.UnitGraph;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -11,18 +12,16 @@ public class PersonAnalyst {
     public static void main(String[] args) {
         System.out.println("good:"+System.getProperty("java.home"));
         List<String> processDir = new LinkedList<String>();
-        processDir.add("/root/IdeaProjects/soot-tools/soot/target/classes");
+        processDir.add("E:\\codes\\homework\\soot-tools\\soot-tools\\soot\\target\\classes");
         Options.v().set_process_dir(processDir);
         System.out.println(Scene.v().getSootClassPath());
         SootClass sc = Scene.v().loadClassAndSupport("Person");
         sc.setApplicationClass();
-
         StringBuffer finalString = new StringBuffer();
         finalString.append("Person's methods:\n");
         for(SootMethod temp : sc.getMethods()){
             StringBuffer sb = new StringBuffer("");
             JimpleBody jBody = new JimpleBody(temp);
-            System.out.println(jBody.toString());
             for(Type type: temp.getParameterTypes()){
                 if(sb.toString().contains(",")){
                     sb.append(","+type.toQuotedString());
