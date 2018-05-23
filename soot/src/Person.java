@@ -9,11 +9,17 @@ public class Person {
         System.out.println(this.name);
     }
 
-    public void killYou(){
-        if(this.age > 20)
+    public Integer killYou(){
+        Integer res = this.age;
+        if(this.age > 20){
             System.out.println(" kill you.");
-        else
+            res = 20;
+        }
+        else{
             System.out.println(" kill me.");
+            res = 18;
+        }
+        return this.age+res;
     }
 
     public String getName() {
