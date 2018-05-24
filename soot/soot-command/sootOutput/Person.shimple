@@ -1,0 +1,241 @@
+public class Person extends java.lang.Object
+{
+    private java.lang.String name;
+    private java.lang.String gender;
+    private java.lang.Integer age;
+    private java.lang.String description;
+    private java.lang.Double score;
+
+    public void <init>()
+    {
+        Person r0;
+
+        r0 := @this: Person;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void whoAmI()
+    {
+        Person r0;
+        java.lang.String $r1;
+        java.io.PrintStream $r2;
+
+        r0 := @this: Person;
+
+        $r2 = <java.lang.System: java.io.PrintStream out>;
+
+        $r1 = r0.<Person: java.lang.String name>;
+
+        virtualinvoke $r2.<java.io.PrintStream: void println(java.lang.String)>($r1);
+
+        return;
+    }
+
+    public java.lang.Integer killYou()
+    {
+        Person r0;
+        java.lang.Integer $r1, $r3, $r4, r6, r7, r7_1, r7_2;
+        int $i0, $i1, $i2, $i3;
+        java.io.PrintStream $r2, $r5;
+
+        r0 := @this: Person;
+
+        r6 = r0.<Person: java.lang.Integer age>;
+
+        $r1 = r0.<Person: java.lang.Integer age>;
+
+        $i0 = virtualinvoke $r1.<java.lang.Integer: int intValue()>();
+
+        if $i0 <= 20 goto label1;
+
+        $r5 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r5.<java.io.PrintStream: void println(java.lang.String)>(" kill you.");
+
+        r7 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(20);
+
+(0)     goto label2;
+
+     label1:
+        $r2 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r2.<java.io.PrintStream: void println(java.lang.String)>(" kill me.");
+
+(1)     r7_1 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(18);
+
+     label2:
+        r7_2 = Phi(r7 #0, r7_1 #1);
+
+        $r3 = r0.<Person: java.lang.Integer age>;
+
+        $i1 = virtualinvoke $r3.<java.lang.Integer: int intValue()>();
+
+        $i2 = virtualinvoke r7_2.<java.lang.Integer: int intValue()>();
+
+        $i3 = $i1 + $i2;
+
+        $r4 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i3);
+
+        return $r4;
+    }
+
+    public java.lang.String getName()
+    {
+        Person r0;
+        java.lang.String $r1;
+
+        r0 := @this: Person;
+
+        $r1 = r0.<Person: java.lang.String name>;
+
+        return $r1;
+    }
+
+    public void setName(java.lang.String)
+    {
+        Person r0;
+        java.lang.String r1;
+
+        r0 := @this: Person;
+
+        r1 := @parameter0: java.lang.String;
+
+        r0.<Person: java.lang.String name> = r1;
+
+        return;
+    }
+
+    public java.lang.String getGender()
+    {
+        Person r0;
+        java.lang.String $r1;
+
+        r0 := @this: Person;
+
+        $r1 = r0.<Person: java.lang.String gender>;
+
+        return $r1;
+    }
+
+    public void setGender(java.lang.String)
+    {
+        Person r0;
+        java.lang.String r1;
+
+        r0 := @this: Person;
+
+        r1 := @parameter0: java.lang.String;
+
+        r0.<Person: java.lang.String gender> = r1;
+
+        return;
+    }
+
+    public java.lang.Integer getAge()
+    {
+        Person r0;
+        java.lang.Integer $r1;
+
+        r0 := @this: Person;
+
+        $r1 = r0.<Person: java.lang.Integer age>;
+
+        return $r1;
+    }
+
+    public void setAge(java.lang.Integer)
+    {
+        Person r0;
+        java.lang.Integer r1;
+
+        r0 := @this: Person;
+
+        r1 := @parameter0: java.lang.Integer;
+
+        r0.<Person: java.lang.Integer age> = r1;
+
+        return;
+    }
+
+    public java.lang.String getDescription()
+    {
+        Person r0;
+        java.lang.String $r1;
+
+        r0 := @this: Person;
+
+        $r1 = r0.<Person: java.lang.String description>;
+
+        return $r1;
+    }
+
+    public void setDescription(java.lang.String)
+    {
+        Person r0;
+        java.lang.String r1;
+
+        r0 := @this: Person;
+
+        r1 := @parameter0: java.lang.String;
+
+        r0.<Person: java.lang.String description> = r1;
+
+        return;
+    }
+
+    public java.lang.Double getScore()
+    {
+        Person r0;
+        java.lang.Double $r1;
+
+        r0 := @this: Person;
+
+        $r1 = r0.<Person: java.lang.Double score>;
+
+        return $r1;
+    }
+
+    public void setScore(java.lang.Double)
+    {
+        Person r0;
+        java.lang.Double r1;
+
+        r0 := @this: Person;
+
+        r1 := @parameter0: java.lang.Double;
+
+        r0.<Person: java.lang.Double score> = r1;
+
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] r0;
+        Person r1, $r2;
+        java.lang.Integer $r3;
+
+        r0 := @parameter0: java.lang.String[];
+
+        $r2 = new Person;
+
+        specialinvoke $r2.<Person: void <init>()>();
+
+        r1 = $r2;
+
+        $r3 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(20);
+
+        virtualinvoke r1.<Person: void setAge(java.lang.Integer)>($r3);
+
+        virtualinvoke r1.<Person: void setName(java.lang.String)>("Wuheng");
+
+        virtualinvoke r1.<Person: java.lang.Integer killYou()>();
+
+        virtualinvoke r1.<Person: void whoAmI()>();
+
+        return;
+    }
+}
